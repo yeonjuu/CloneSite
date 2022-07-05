@@ -23,30 +23,8 @@ body{min-width: 1280px;}
 .nav_service li a:hover {text-decoration: underline;}
 
 .visual {position : relative; padding : 0 50px;}
-.visual .prev, 
-.visual .next{display: block; position: absolute; width:25px; height: 47px; top : 50%; transform: translate(-50%);
-background: url(../images/sp_com.png) no-repeat; color : transparent;}
-.visual .prev{left : 80px; background-position: -128px -60px;}
-.visual .next{right : 65px; background-position: -162px -60px;}
-
 .visual .con > div {height: 640px;}
 .visual .con .slide {background: url(../images/bg_main0801.jpg) no-repeat center;}
-
-.visual .control {position: absolute; left: 0; bottom: 55px; width : 100%; text-align: center;}
-.visual .control > div {display: inline-block; position : relative; padding : 0 45px 0 0;}
-.visual .control > div > div { display: inline-block; position : absolute; right : 0;}
-.visual .control >div > div > a {overflow:hidden; display : inline-block; margin : 0 0 7px 0; width: 8px; height: 9px; 
-    background : url(../images/sp_com.png) no-repeat; opacity: 0.5;}
-.visual .control a.on{opacity: 1;}
-.visual .control a.play{background-position: -108px -72px;}
-.visual .control a.pause{background-position: -108px -60px;}
-
-/* font-size : 0;은 html 코드에서 발생하는 공간을 없앨 수 있음 (display : inline-block 으로 인한 공간 발생)  */
-.visual .control ul {display : inline-block; font-size:0; position : relative; top: -10px;}
-.visual .control ul li {display: inline-block; padding : 0 3px;}
-.visual .control li.on {background: #fff;}
-.visual .control ul li a{display: block; width: 48px; height: 3px; background:rgba(255, 255, 255, 0.5);}
-.visual .control a {color : transparent;}
 
 .product a {display : block; font-size:15px; }
 .product a:hover{color : var(--hover-color); font-weight: bold;}
@@ -69,3 +47,119 @@ background: url(../images/sp_com.png) no-repeat; color : transparent;}
 
 .product ul{font-size:0; text-align: center; margin : 46px 0 41px;}
 .product ul li{display: inline-block; padding :0 55px; text-align: center;}
+
+.magzine {overflow : hidden; position : relative; background : #dfd9d1; height: 670px;}
+
+/* animate를 이용해서 slide_box 내용 변경 */
+.magzine .slide_box > div {position : absolute; top : 150px; left : 50%;
+    transform: translateX(-50%); width: 1180px; height: 430px;}
+.magzine .slide_box > div:nth-child(1) {margin-left : -1280px;}
+.magzine .slide_box > div:nth-child(3) {margin-left : 1280px;}
+.magzine .slide_box .left  {overflow : hidden; position : relative; float : left; width:800px; height: 430px;}
+
+.magzine .slide_box .left > div { position : absolute; right : 0; padding : 85px 10px 0;
+    width : 193px; height: 100%; background : rgb(32, 32, 32, 1);}
+.magzine .slide_box .left div h3 {color : #fff; font-size : 17px; line-height: 32px;}
+.magzine .slide_box .left div h3 span {display : block; color : #fff; font-size: 24px; font-weight: normal;}
+.magzine .slide_box .left div p {font-size : 16px; color : #fff; text-align: left; padding : 50px 0 0 ; line-height: 24px;}
+.magzine .slide_box .left div a {display: block; border : 1px solid #fff; width: 160px; height: 45px;
+text-align: center; font-size: 16px; line-height: 45px; color : #fff; position:absolute; bottom : 40px; right : 20px;}
+.magzine .slide_box .left img {width:100%; height: 100%;}
+
+.magzine .slide_box .right {float : right; background : #fff; width: 380px; 
+    height : 430px; padding : 20px 20px 0;}
+.magzine .slide_box .right li a {display: table;}
+.magzine .slide_box .right li a div {display: table-cell; position: relative; padding : 0 0 0 100px; height: 82px; 
+    font-size:16px; color : #333; vertical-align: middle;}
+.magzine .slide_box .right li a img {position : absolute; left : 0; top : 0; width : 73px;}
+.magzine .slide_box .right li a {display: block;}
+.magzine .slide_box .right li a strong {display: block; font-size : 13px; margin : 0 0 7px 0 ;}
+.magzine.slide .control {bottom: 48px;}
+.magzine.slide .control div{padding : 0;}
+
+.top_product{height: 600px; background:#fff;}
+.top_product ul{ overflow:auto; margin-top: 35px; font-size:0; text-align: center;}
+.top_product ul li{display: inline-block;}
+
+.top_product ul li a{display:block; margin: 0 20px 0 0 ; font-size:13px; text-align: center; line-height: 30px;} 
+.top_product ul li:nth-child(1) h3:before{content:"";  display:block;
+    background:url(../images/product02.jpg) no-repeat; width:280px; height: 300px;}
+.top_product ul li:nth-child(2) h3:before{content:"";  display:block;
+    background:url(../images/product01.jpg) no-repeat; width:280px; height: 300px;}
+.top_product ul li:nth-child(3) h3:before{content:"";  display:block;
+    background:url(../images/product03.jpg) no-repeat; width:280px; height: 300px;}
+.top_product ul li:nth-child(4) h3:before{content:"";  display:block;
+    background:url(../images/product04.jpg) no-repeat; width:280px; height: 300px;}
+.top_product ul li:last-child a{ margin : 0;}
+
+.top_product ul li a h3 {text-align: center; font-size:18px;}
+.top_product ul li a:hover h3{text-decoration: underline;}
+
+.example {height: 790px; background : #dfd9d1;}
+
+.youtube {height: 370px; background:#fff;}
+.youtube ul {font-size:0; text-align: center; margin : 20px 0 0 0;}
+.youtube ul li{display: inline-block; text-align: center; padding: 0 20px 0 0 ;}
+.youtube ul li:last-child{padding:0;}
+.youtube ul li a{display: block; }
+.youtube ul li a img {width: 280px; height: 150px; margin : 0 0 20px 0;}
+.youtube ul li a strong{display : block; font-size:15px;}
+.youtube ul li a:hover strong{text-decoration: underline;}
+
+/* display:inline-block; 시 div가 정렬 되지 않는데 text떄문인거 같다 , 해서 vertical-align : bottom; 이 해결책 */
+.notice {height : 390px; background : url(../images/bg_main_business.jpg) no-repeat; text-align: center; padding : 50px 0;}
+.notice > div {display :inline-block; width:280px; height: 280px; margin-right: 13px; vertical-align: bottom;}
+.notice .store > a {display : block; width: 100%; height:100%; text-align: center; font-size:17px;
+     font-weight: bold; color :#fff; padding :150px 0 0;}
+.notice .store > a > span {display: none;}
+.notice .store > a:hover{background:rgba(41,95,121,0.5);}
+.notice .store > a:hover > span {display: block; font-weight: normal; font-size: 15px; width: 210px; height: 45px; 
+    margin :20px auto 0; line-height: 20px; }     
+.notice .store {background:url(../images/bg_key_link03.jpg) no-repeat;} 
+.notice .news { background : #f2f0ed; position: relative;}
+.notice .news h2{height:62px; padding: 20px 0; text-align: center; font-size:20px; 
+    color : #2d5b79; border-bottom: 1px solid #fff;}
+.notice .news > a {position: absolute; top:20px; right:16px;  width: 30px; height: 30px; 
+    background :url(../images/sp_com.png) no-repeat -196px -60px #fff; color : transparent; border-radius: 30px;}
+.notice .news ul li {height : 100px; position: relative; padding: 15px 30px 0; }
+.notice .news ul li a {display:block; width: 215px; height: 35px;}
+.notice .news ul li a:hover {text-decoration: underline;}
+.notice .news ul li span {display: block; width: 100%; text-overflow: ellipsis; text-align: left;}
+.notice .news ul li p {position:absolute; bottom:15px; left:30px;}
+.notice > div:last-child {background:#fff; padding : 20px 20px 0; margin-right: 0;} 
+.notice > div:last-child div {padding : 0 0 10px;}
+.notice > div:last-child h2 {font-size:20px; text-align: center; padding : 0 0 25px; line-height: 100%; color : #2d5b79;}
+.notice > div:last-child select {font-size:15px;}
+.notice > div:last-child input::-webkit-input-placeholder{ font-size:15px; color:#949394;}
+.notice > div:last-child select,
+.notice > div:last-child input {height: 45px; width:100%; background : #f1f0ef; border : none; text-indent: 15px;}
+.notice > div:last-child a {display: block; height: 45px; line-height: 45px; text-align: center; 
+    background:#2d5b79; color : #fff; margin : 20px 0 0;}
+
+/* 각 콘텐츠부분의 제목과 설명 __ css 재사용*/
+.content h2 { text-align: center; font-size:28px; padding: 50px 0 16px;}
+.content p {text-align: center; font-size : 14px; }
+
+/* Slide__ css의 재사용을 위한 다중 클래스 지정 */
+.slide .prev, 
+.slide .next{display: block; position: absolute; width:25px; height: 47px; top : 50%; transform: translate(-50%);
+background: url(../images/sp_com.png) no-repeat; color : transparent;}
+.slide .prev{left : 80px; background-position: -128px -60px;}
+.slide .next{right : 65px; background-position: -162px -60px;}
+.slide .control {position: absolute; left: 0; bottom: 55px; width : 100%; text-align: center;}
+.slide .control > div {display: inline-block; position : relative; padding : 0 45px 0 0;}
+.slide .control > div > div { display: inline-block; position : absolute; right : 0;}
+.slide .control > div > div > a {overflow:hidden; display : inline-block; margin : 0 0 7px 0; width: 8px; height: 9px; 
+    background : url(../images/sp_com.png) no-repeat; opacity: 0.5;}
+.slide .control a.on{opacity: 1;}
+.slide .control a.play{background-position: -108px -72px;}
+.slide .control a.pause{background-position: -108px -60px;}
+/* font-size : 0;은 html 코드에서 발생하는 공간을 없앨 수 있음 (display : inline-block 으로 인한 공간 발생)  */
+.slide .control ul {display : inline-block; font-size:0; position : relative; top: -10px;}
+.slide .control ul li {display: inline-block; padding : 0 3px;}
+.slide .control li.on {background: #fff;}
+.slide .control ul li a{display: block; width: 48px; height: 3px; background:rgba(255, 255, 255, 0.5);}
+.slide .control a {color : transparent;}
+
+
+
