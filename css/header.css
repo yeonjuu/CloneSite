@@ -95,9 +95,20 @@ text-align: center; font-size: 16px; line-height: 45px; color : #fff; position:a
 .top_product ul li a h3 {text-align: center; font-size:18px;}
 .top_product ul li a:hover h3{text-decoration: underline;}
 
-.example {height: 790px; background : #dfd9d1;}
+.example {height: 790px; background : #dfd9d1; position : relative;}
+.example ul {width: 1180px; margin: 35px auto 0;}
+.example ul li{float:left; margin-right:20px;}
+.example ul li:last-child{margin : 0;}
+.example ul .top {width: 280px; height: 280px;}
+.example ul .top img {width: 100%; height: 100%;}
+.example ul .txt {width: 280px; height: 270px; padding:26px 28px 24px; background:#fff;}
 
-.youtube {height: 370px; background:#fff;}
+.example ul li .txt .tit{font-size: 17px; padding: 0 0 40px 0; text-align: left; font-weight: bold;}
+.example ul li .cont {position:relative; width: 222px; height: 24px; text-align: left; padding-left:69px;}
+.example ul li .cont span{font-weight: bold; font-size:14px; position: absolute; left:0;}
+.example ul li a:hover .txt p{text-decoration: underline;}
+
+.youtube {height: 480px; background:#fff; position: relative;}
 .youtube ul {font-size:0; text-align: center; margin : 20px 0 0 0;}
 .youtube ul li{display: inline-block; text-align: center; padding: 0 20px 0 0 ;}
 .youtube ul li:last-child{padding:0;}
@@ -107,7 +118,7 @@ text-align: center; font-size: 16px; line-height: 45px; color : #fff; position:a
 .youtube ul li a:hover strong{text-decoration: underline;}
 
 /* display:inline-block; 시 div가 정렬 되지 않는데 text떄문인거 같다 , 해서 vertical-align : bottom; 이 해결책 */
-.notice {height : 390px; background : url(../images/bg_main_business.jpg) no-repeat; text-align: center; padding : 50px 0;}
+.notice {height : 390px; background : url(../images/bg_main_business.jpg) no-repeat center; text-align: center; padding : 50px 0;}
 .notice > div {display :inline-block; width:280px; height: 280px; margin-right: 13px; vertical-align: bottom;}
 .notice .store > a {display : block; width: 100%; height:100%; text-align: center; font-size:17px;
      font-weight: bold; color :#fff; padding :150px 0 0;}
@@ -118,7 +129,7 @@ text-align: center; font-size: 16px; line-height: 45px; color : #fff; position:a
 .notice .store {background:url(../images/bg_key_link03.jpg) no-repeat;} 
 .notice .news { background : #f2f0ed; position: relative;}
 .notice .news h2{height:62px; padding: 20px 0; text-align: center; font-size:20px; 
-    color : #2d5b79; border-bottom: 1px solid #fff;}
+    color : var(--hover-color); border-bottom: 1px solid #fff;}
 .notice .news > a {position: absolute; top:20px; right:16px;  width: 30px; height: 30px; 
     background :url(../images/sp_com.png) no-repeat -196px -60px #fff; color : transparent; border-radius: 30px;}
 .notice .news ul li {height : 100px; position: relative; padding: 15px 30px 0; }
@@ -135,6 +146,25 @@ text-align: center; font-size: 16px; line-height: 45px; color : #fff; position:a
 .notice > div:last-child input {height: 45px; width:100%; background : #f1f0ef; border : none; text-indent: 15px;}
 .notice > div:last-child a {display: block; height: 45px; line-height: 45px; text-align: center; 
     background:#2d5b79; color : #fff; margin : 20px 0 0;}
+
+
+.footer .top { padding : 10px 0; background : #3a505e; }
+.footer .top > div {width:1180px; margin : 0 auto; }
+.footer .top > div ul {float:left; line-height: 50px; }
+.footer .top > div ul li{float:left; padding : 0 19px 0 0; position: relative;}
+.footer .top > div ul li::after {content:""; position:absolute; top : 50%; right: 8px; transform: translateY(-50%); width:1px; height: 8px; background:#666;}
+.footer .top > div ul li:last-child::after{display: none;}
+.footer .top > div div {float:right;}
+.footer .top ul li a {display : block; color : #fff; font-size:14px;}
+.footer .top > div div p {float:left;width:328px; height: 48px; background:#1b1f22; color:#fff; font-size: 10px; text-align: center;}
+.footer .top > div div p strong{display: block; height:13px; font-size:15px; margin: 9px 0 7px 0; }
+.footer .top > div div select {width: 200px; height:48px; font-size:12px; margin-left: 10px; text-indent: 25px;}
+
+.footer .btm {height: 220px; background:#5b5e61; color:#fff;}
+.footer .btm > div{width: 1180px; margin : 0 auto; padding: 40px 0; font-size:14px; line-height: 26px;}
+.footer .btm > div p{width:130px; height:50px; background:url(../images/sp_com.png) no-repeat -150px 0; color:transparent; margin-bottom: 28px;}
+.footer .btm > div strong{font-size: 16px; padding:0 15px; position: relative;}
+.footer .btm > div strong::before{content:""; position:absolute; top:50%; transform: translateY(-50%); left:9px; width:1px; height:8px; background : #999;}
 
 /* 각 콘텐츠부분의 제목과 설명 __ css 재사용*/
 .content h2 { text-align: center; font-size:28px; padding: 50px 0 16px;}
@@ -157,9 +187,12 @@ background: url(../images/sp_com.png) no-repeat; color : transparent;}
 /* font-size : 0;은 html 코드에서 발생하는 공간을 없앨 수 있음 (display : inline-block 으로 인한 공간 발생)  */
 .slide .control ul {display : inline-block; font-size:0; position : relative; top: -10px;}
 .slide .control ul li {display: inline-block; padding : 0 3px;}
-.slide .control li.on {background: #fff;}
+.slide .control li.on a{background: #fff;}
 .slide .control ul li a{display: block; width: 48px; height: 3px; background:rgba(255, 255, 255, 0.5);}
 .slide .control a {color : transparent;}
 
+.example .control li.on a,
+.youtube .control li.on a{background : #2d5b79;}
 
-
+.example .control ul li a,
+.youtube .control ul li a{background:rgb(175, 175, 175);}
